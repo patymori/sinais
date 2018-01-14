@@ -82,7 +82,7 @@ Verbos de formatação que usamos:
 * `%c` é para exibir uma runa como caractere; o modificador `[1]` é para indicar que queremos usar o argumento 1 (`runa`) novamente nesta posição, e não o argumento seguinte (`nome`). Assim geramos três campos na saída usando apenas dois argumentos, porque usamos `runa` duas vezes.
 * `%s` para exibir um valor `string`.
 
-Na realidade, `io.Reader` é uma _interface_, o que significa que nossa função `Listar` aceita como primeiro argumento qualquer objeto que implemente o método `Read` conforme a [documentação](https://golang.org/pkg/io/#Reader). Isso facilita os testes: podemos passar um buffer em vez de um arquivo para testar a função `Listar`. Em geral, é uma boa ideia escrever funções que aceitam interfaces como argumento, porque isso dá mais flexibilidae para quem vai usar nossa API.
+Na realidade, `io.Reader` é uma _interface_, o que significa que nossa função `Listar` aceita como primeiro argumento qualquer objeto que implemente o método `Read` conforme a [documentação](https://golang.org/pkg/io/#Reader). Isso facilita os testes: podemos passar um buffer em vez de um arquivo para testar a função `Listar`. Em geral, é uma boa ideia escrever funções que aceitam interfaces como argumento, porque isso dá mais flexibilidade para quem vai usar nossa API.
 
 Para usar `fmt.Printf` e `io.Reader` na função `Listar`, temos que acrescentar  os pacotes `fmt` e `io` à declaração `import` no arquivo `runefinder.go`, mantendo a ordem alfabética como pede a boa educação na comunidade Go:
 
